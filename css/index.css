@@ -1,0 +1,202 @@
+:root {
+  --inner-bg: linear-gradient(
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.07)
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)),
+    linear-gradient(rgba(40, 50, 65, 0.54), rgba(40, 50, 65, 0.54));
+}
+
+header {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.45) 0 100%),
+    url("./../assets/images/Mask\ group.png"); */
+  background: linear-gradient(rgba(0, 0, 0, 0.45) 0 100%),
+    url("./../assets/images/bg.jpeg");
+  background-repeat: no-repeat;
+  /* background-size: 100% 100%; */
+  background-size: cover;
+  background-position: center;
+}
+
+.row > div > .inner {
+  height: 80%;
+}
+
+@media (max-width: 576px) {
+  .row > div > .inner {
+    width: 80% !important;
+  }
+}
+@media (max-width: 376px) {
+  .row > div > .inner {
+    width: 100% !important;
+  }
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: 0.75s ease;
+  -webkit-transition: 0.75s ease;
+  -moz-transition: 0.75s ease;
+  -ms-transition: 0.75s ease;
+  -o-transition: 0.75s ease;
+}
+
+.card > div {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+}
+
+.frontFace {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.backFace {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+.switch {
+  width: 45%;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 1px 3px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.switch button {
+  width: 45%;
+  height: 85%;
+  transition: 0.75s;
+  -webkit-transition: 0.75s;
+  -moz-transition: 0.75s;
+  -ms-transition: 0.75s;
+  -o-transition: 0.75s;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.backFace .inner,
+.frontFace .inner {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.07)
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)),
+    linear-gradient(rgba(40, 50, 65, 0.54), rgba(40, 50, 65, 0.54));
+  background-blend-mode: overlay;
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
+}
+
+.backFace .inner .form .name > div {
+  width: 48%;
+}
+
+.backFace .inner .form input,
+.frontFace .inner .form input {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body > header > div > div > div > div > div > div > div > div > div > i,
+body > header > div > div > div > div > div > div > div > div > div > div > i {
+  right: 15px;
+  cursor: pointer;
+}
+
+/* disable default eye icon in bootstrap */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* pop left menu  */
+.pop-left {
+  width: 100px;
+  background: var(--inner-bg);
+  background-blend-mode: overlay;
+  right: calc(100% + 20px);
+  opacity: 0;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+}
+
+.last-name .pop-left {
+  left: calc(100% + 20px);
+}
+
+.last-name .pop-left::before {
+  border: 10px solid rgba(44, 50, 59, 0.83);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  right: 100%;
+}
+
+.pop-left::before {
+  content: "";
+  position: absolute;
+  border: 10px solid rgba(44, 50, 59, 0.83);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  right: -19px;
+  top: calc(50% - 10px);
+  z-index: -1;
+}
+
+.pop-left div p {
+  font-size: 10px;
+}
+
+.pass .pop-left {
+  left: calc(100% + 20px);
+}
+
+.pass .pop-left::before {
+  border: 10px solid rgba(44, 50, 59, 0.83);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  right: 100%;
+}
+
+/* iframe */
+.frontFace canvas {
+  bottom: 85px;
+  width: 150px;
+  height: 140px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}

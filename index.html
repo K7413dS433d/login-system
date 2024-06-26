@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Vision sign up</title>
+    <!-- link icon  -->
+    <link rel="icon" href="./assets/icons/apple.png" />
+    <!-- bootstrap link  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- font awesome icon  -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- link custom style -->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/dist/dotlottie-web.umd.js"></script>
+  </head>
+  <body>
+    <header class="container-fluid vh-100">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div
+          class="col-lg-4 col-md-5 col-sm-8 d-flex justify-content-center align-items-center h-100"
+        >
+          <div class="inner w-100 d-flex align-items-center flex-column">
+            <div class="position-relative w-100 h-100 mb-3">
+              <div
+                class="card bg-transparent position-absolute h-100 w-100 border-0"
+              >
+                <div
+                  class="frontFace h-100 w-100 rounded-4 position-absolute p-3"
+                >
+                  <div
+                    class="inner h-100 text-white pt-2 d-flex flex-column align-items-center"
+                  >
+                    <h3 class="fs-1">Sign In</h3>
+                    <div
+                      class="form p-2 d-flex flex-column gap-4 justify-content-between align-items-center h-100 w-100"
+                    >
+                      <div
+                        class="holder d-flex flex-column gap-4 w-100 px-2 mt-5"
+                      >
+                        <div class="email w-100">
+                          <input
+                            class="form-control border-0 rounded-5 text-white"
+                            type="text"
+                            placeholder="Email"
+                            id="signInEmail"
+                          />
+                        </div>
+                        <div
+                          class="password w-100 position-relative d-flex align-items-center"
+                        >
+                          <input
+                            class="form-control border-0 rounded-5 text-white"
+                            type="password"
+                            placeholder="Password"
+                            id="signInPassword"
+                          />
+                          <i
+                            class="eye-icon fa-solid fa-eye-slash position-absolute fa-sm"
+                          ></i>
+                        </div>
+                      </div>
+                      <!-- animation here  -->
+                      <canvas class="position-absolute" id="canvas"></canvas>
+                      <!-- end here  -->
+                      <button
+                        class="btn btn-primary w-50 rounded-5 mb-4"
+                        type="button"
+                        id="sign-in"
+                      >
+                        Sign In
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="backFace h-100 w-100 rounded-4 position-absolute p-3"
+                >
+                  <div
+                    class="inner h-100 text-white pt-2 d-flex flex-column align-items-center"
+                  >
+                    <h3 class="fs-1">Sign Up</h3>
+                    <div
+                      class="form p-2 d-flex flex-column justify-content-evenly align-items-center h-100"
+                    >
+                      <div class="name d-flex justify-content-between">
+                        <div class="first-name position-relative">
+                          <div
+                            class="pop-left position-absolute rounded-3 p-1 d-flex flex-column gap-1"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="fa-regular fa-circle-check fa-2xs"></i>
+                              <p class="m-0">At least 3 characters</p>
+                            </div>
+                          </div>
+                          <input
+                            class="has-pop form-control border-0 rounded-5 text-white"
+                            type="text"
+                            placeholder="First Name"
+                            id="fName"
+                          />
+                        </div>
+                        <div class="last-name position-relative">
+                          <div
+                            class="pop-left position-absolute rounded-3 p-1 d-flex flex-column gap-1"
+                          >
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="fa-regular fa-circle-check fa-2xs"></i>
+                              <p class="m-0">At least 3 characters</p>
+                            </div>
+                          </div>
+                          <input
+                            class="has-pop form-control border-0 rounded-5 text-white"
+                            type="text"
+                            placeholder="Last Name"
+                            id="lName"
+                          />
+                        </div>
+                      </div>
+                      <div class="email w-100 position-relative">
+                        <div
+                          class="pop-left position-absolute rounded-3 p-1 d-flex flex-column gap-1"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <i class="fa-regular fa-circle-check fa-2xs"></i>
+                            <p class="m-0">Valid Email Ex@gmail.com</p>
+                          </div>
+                        </div>
+                        <input
+                          class="has-pop form-control border-0 rounded-5 text-white"
+                          type="email"
+                          placeholder="Email"
+                          id="email"
+                        />
+                      </div>
+                      <div
+                        class="pass password w-100 position-relative d-flex align-items-center"
+                      >
+                        <div
+                          class="pop-left position-absolute rounded-3 p-1 d-flex flex-column gap-1"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <i class="fa-regular fa-circle-check fa-2xs"></i>
+                            <p class="m-0">At least 8 characters</p>
+                          </div>
+                          <div class="d-flex align-items-center gap-2">
+                            <i class="fa-regular fa-circle-check fa-2xs"></i>
+                            <p class="m-0">One or more upper char</p>
+                          </div>
+                          <div class="d-flex align-items-center gap-2">
+                            <i class="fa-regular fa-circle-check fa-2xs"></i>
+                            <p class="m-0">One or more symbol</p>
+                          </div>
+                        </div>
+                        <input
+                          class="has-pop form-control border-0 rounded-5 text-white"
+                          type="password"
+                          placeholder="Password"
+                          id="password"
+                        />
+                        <i
+                          class="eye-icon fa-solid fa-eye-slash position-absolute fa-sm"
+                        ></i>
+                      </div>
+                      <div
+                        class="re-pass password w-100 position-relative d-flex align-items-center"
+                      >
+                        <div
+                          class="pop-left position-absolute rounded-3 p-1 d-flex flex-column gap-1"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <i class="fa-regular fa-circle-check fa-2xs"></i>
+                            <p class="m-0">Mach the password</p>
+                          </div>
+                        </div>
+                        <input
+                          class="has-pop form-control border-0 rounded-5 text-white"
+                          type="password"
+                          placeholder="Confirm Password"
+                          id="confirm-password"
+                        />
+                        <i
+                          class="eye-icon fa-solid fa-eye-slash position-absolute fa-sm"
+                        ></i>
+                      </div>
+                      <button
+                        class="btn btn-primary w-50 rounded-5"
+                        type="button"
+                        id="sign-up"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="switch rounded-5 d-flex justify-content-around align-items-center p-1"
+            >
+              <button
+                class="login rounded-5 border-0 bg-transparent text-white active"
+              >
+                Sign In
+              </button>
+              <button
+                class="sign-up rounded-5 border-0 bg-transparent text-white"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- bootstrap link  -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <!-- custom link  -->
+    <script src="./JS/index.js" type="module"></script>
+  </body>
+</html>
