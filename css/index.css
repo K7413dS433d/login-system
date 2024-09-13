@@ -89,6 +89,12 @@ header {
   -o-transition: 0.75s;
 }
 
+@media (min-width: 769px) and (max-width: 902px) {
+  .switch button {
+    font-size: 13px;
+  }
+}
+
 .active {
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
@@ -194,9 +200,17 @@ input[type="password"]::-ms-clear {
   bottom: 85px;
   width: 150px;
   height: 140px;
-  transition: .5s;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+/* modal animation  */
+
+#modalBody {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
 }

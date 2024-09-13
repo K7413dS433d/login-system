@@ -1,3 +1,4 @@
+//write hello+username in the home page
 let i = 0;
 let userName = localStorage.getItem("userName");
 let txt = `Hello ${userName.charAt(0).toUpperCase() + userName.slice(1)}`;
@@ -10,9 +11,7 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
-console.log(vid);
 
 addEventListener("load", () => {
   typeWriter();
 });
-

@@ -210,6 +210,9 @@ signUpBtn.addEventListener("click", () => {
   if (SignUpIsValid()) {
     writeData();
     clear();
+    lottie.triggerAnimationModal().then(() => {
+      flip();
+    });
   } else {
     if (!nameIsValid(inputs.firstName.value)) {
       popLeft[0].style.opacity = "1";
@@ -261,7 +264,7 @@ signInBtn.addEventListener("click", function () {
   );
   if (loginInfo.status) {
     let userName = `${loginInfo.info.firstName} ${loginInfo.info.lastName}`;
-    lottie.triggerAcc();
+    lottie.triggerSignIn();
     localStorage.setItem("userName", userName);
     setInterval(() => {
       location.href = "./../pages/home.html";

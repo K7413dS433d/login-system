@@ -61,9 +61,9 @@
                           ></i>
                         </div>
                       </div>
+                      <!-- end here  -->
                       <!-- animation here  -->
                       <canvas class="position-absolute" id="canvas"></canvas>
-                      <!-- end here  -->
                       <button
                         class="btn btn-primary w-50 rounded-5 mb-4"
                         type="button"
@@ -184,6 +184,7 @@
                           class="eye-icon fa-solid fa-eye-slash position-absolute fa-sm"
                         ></i>
                       </div>
+
                       <button
                         class="btn btn-primary w-50 rounded-5"
                         type="button"
@@ -214,6 +215,31 @@
         </div>
       </div>
     </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="animation_modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" >
+        <div class="modal-content" id="modalBody">
+          <div
+            class="modal-body flex justify-content-center align-items-center"
+          >
+            <!-- animation here  -->
+            <canvas
+              class="user-select-none pe-none bg-transparent w-100 h-100"
+              id="canvas2"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end  -->
+
     <!-- bootstrap link  -->
     <script src="./JS/bootstrap.bundle.min.js"></script>
     <!-- custom link  -->
