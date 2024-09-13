@@ -25,4 +25,4 @@ You can try out a live demo of Appeal Vision [here](https://login-system-lemon.v
 
 Watch a demonstration of Appeal Vision in action:
 
-[![Watch the video](https://img.youtube.com/vi/your-video-id/maxresdefault.jpg)](https://www.youtube.com/watch?v=your-video-id)
+https://github.com/user-attachments/assets/a23c9ad0-599b-4e81-a63d-7f18e808be59
