@@ -277,12 +277,12 @@ signInBtn.addEventListener("click", function () {
 //sign in message wrong
 ["focus", "input"].forEach(function (evt) {
   inputs.signInEmail.addEventListener(evt, () => {
-    lottie.pauseWrong();
+    lottie.clearLoginCanvas();
   });
 });
 
 ["focus", "input"].forEach(function (evt) {
   inputs.signInPassword.addEventListener(evt, () => {
-    lottie.pauseWrong();
+    lottie.clearLoginCanvas();
   });
 });
